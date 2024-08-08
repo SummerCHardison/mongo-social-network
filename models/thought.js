@@ -4,7 +4,7 @@ const reactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            default: new Schema.Types.ObjectId
+            default: () => new Types.ObjectId()
         },
         reactionBody: {
             type: String,
@@ -20,7 +20,7 @@ const reactionSchema = new Schema(
             default: Date.now
         }
     }
-)
+);
 
 const thoughtSchema = new Schema(
     {
@@ -48,7 +48,7 @@ const thoughtSchema = new Schema(
     }
 );
 
-userSchema
+thoughtSchema
     .virtual('reactionCount')
     .get(function () {
         return this.reactions.length;
