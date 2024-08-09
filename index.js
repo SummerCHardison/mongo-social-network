@@ -1,3 +1,4 @@
+// starts connection and sets up app running and starting.
 const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
