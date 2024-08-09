@@ -9,4 +9,4 @@ https://drive.google.com/file/d/1qv190n2DjRSI09PfdobMzvZvSRFtc2w4/view?usp=shari
 ## Credits
 Summer Hardison
 
-Thank you to the staff and my peers at UNCC, without all of you my experince with coding woulf be a lot more difficult
+Thank you to the staff and my peers at UNCC, without all of you my experince with coding would be a lot more difficult
