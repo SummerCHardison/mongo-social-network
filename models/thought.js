@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const Mongoose = require('mongoose');
 
+//creating model for reactions where reaction id is an id and it's default is just a new id. Reaction body is a required string with max 280 characters. username is a required string. Created at is a date where default is current date
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -22,7 +23,7 @@ const reactionSchema = new Schema(
         }
     }
 );
-
+// creating schema for though model where thoughtText is a required string with a max length of 280 and min of 1. Created at is a date where default is current date. username is a required string. reactions is a reference to the reaction schema and holds an array with instances of it.
 const thoughtSchema = new Schema(
     {
         thoughtText: {
@@ -48,7 +49,7 @@ const thoughtSchema = new Schema(
         },
     }
 );
-
+// initalizing model for thoughts
 thoughtSchema
     .virtual('reactionCount')
     .get(function () {
@@ -56,5 +57,5 @@ thoughtSchema
     });
 
 const Thought = model('thought', thoughtSchema);
-
+// exporting model
 module.exports = Thought;

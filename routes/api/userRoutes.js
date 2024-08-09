@@ -1,3 +1,4 @@
+// references functions from controllers. defines route further and types of requests to those routes, adds corresponding functions to each one
 const router = require('express').Router();
 const {
     getUser,
